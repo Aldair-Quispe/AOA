@@ -1,6 +1,8 @@
-﻿@Code
+@Code
     ViewData("Title") = "Index"
 End Code
+
+
 
 <head>
     <!-- Favicon -->
@@ -19,38 +21,15 @@ End Code
 </head>
 
 
-<!-- Main Slider Start -->
+<h2 style="text-align:center">¡Bienvenido a AOA!</h2>
 <br>
-<br>
-<br>
+
 <div class="header">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
                 <nav class="navbar bg-light">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-home"></i>Deportivo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-shopping-bag"></i>Casual</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-plus-square"></i>Adidas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-female"></i>Nike</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-child"></i>Balenciaga</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-tshirt"></i>Gucci</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-mobile-alt"></i>Samsung</a>
-                        </li>                        
-                    </ul>
+                    
                 </nav>
             </div>
             <div class="col-md-6">
@@ -78,27 +57,13 @@ End Code
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="header-img">
-                    <div class="img-item">
-                        <img src="estilos/img/category-1.jpg" />
-                        <a class="img-text" href="">
-                            <p>Tu mejor opción para compras online</p>
-                        </a>
-                    </div>
-                    <div class="img-item">
-                        <img src="estilos/img/category-2.jpg" />
-                        <a class="img-text" href="">
-                            <p>Tu mejor opción para compras online</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
 </div>
-<!-- Main Slider End -->
-<!-- Brand Start -->
+
+<h3 style="text-align:center">Algunas de las marcas con las que colaboramos son:</h3>
+
 <div class="brand">
     <div class="container-fluid">
         <div class="brand-slider">
@@ -111,8 +76,8 @@ End Code
         </div>
     </div>
 </div>
-<!-- Brand End -->
-<!-- Feature Start-->
+
+
 <div class="feature">
     <div class="container-fluid">
         <div class="row align-items-center">
@@ -155,8 +120,8 @@ End Code
         </div>
     </div>
 </div>
-<!-- Feature End-->
-<!-- Category Start-->
+
+
 <div class="category">
     <div class="container-fluid">
         <div class="row">
@@ -207,8 +172,8 @@ End Code
         </div>
     </div>
 </div>
-<!-- Category End-->
-<!-- Call to Action Start -->
+
+
 <div class="call-to-action">
     <div class="container-fluid">
         <div class="row align-items-center">
@@ -221,8 +186,8 @@ End Code
         </div>
     </div>
 </div>
-<!-- Call to Action End -->
-<!-- Galeria Start -->
+
+<!-- Galeria -->
 <div class="featured-product product">
     <div class="container-fluid">
         <div class="section-header">
@@ -372,8 +337,8 @@ End Code
         </div>
     </div>
 </div>
-<!-- Galeria End -->
-<!-- Newsletter Start -->
+
+<!-- Datos -->
 <div class="newsletter">
     <div class="container-fluid">
         <div class="row">
@@ -389,8 +354,8 @@ End Code
         </div>
     </div>
 </div>
-<!-- Newsletter End -->
-<!-- Recientes Start -->
+
+<!-- Recientes -->
 <div class="recent-product product">
     <div class="container-fluid">
         <div class="section-header">
@@ -540,8 +505,8 @@ End Code
         </div>
     </div>
 </div>
-<!-- Recientes End -->
-<!-- Review Start -->
+
+<!-- Reviews clientes -->
 <div class="review">
     <div class="container-fluid">
         <div class="row align-items-center review-slider normal-slider">
@@ -552,10 +517,10 @@ End Code
                     </div>
                     <div class="review-text">
                         <h2>Dana Paola</h2>
-                        <h3>Profession</h3>
+                        <h3>Maquillista</h3>
                        
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae nunc eget leo finibus luctus et vitae lorem
+                            Los productos de maquillaje de AOA son de tan alta calidad que no los cambiaría por nada
                         </p>
                     </div>
                 </div>
@@ -567,7 +532,7 @@ End Code
                     </div>
                     <div class="review-text">
                         <h2>Andrés López</h2>
-                        <h3>Profession</h3>
+                        <h3>Diseñador</h3>
                         <div class="ratting">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -576,7 +541,7 @@ End Code
                             <i class="fa fa-star"></i>
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae nunc eget leo finibus luctus et vitae lorem
+                            Compré todas las herramientas para mi trabajo en AOA, son los mejores.
                         </p>
                     </div>
                 </div>
@@ -588,7 +553,7 @@ End Code
                     </div>
                     <div class="review-text">
                         <h2>Mariana Lomeli</h2>
-                        <h3>Profession</h3>
+                        <h3>Escritora</h3>
                         <div class="ratting">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -597,7 +562,7 @@ End Code
                             <i class="fa fa-star"></i>
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae nunc eget leo finibus luctus et vitae lorem
+                            La ropa de mis marcas favoritas está en un solo lugar, ¡Gracias AOA!
                         </p>
                     </div>
                 </div>
