@@ -36,8 +36,10 @@ CREATE TABLE pedido (
   precio_total FLOAT,
   id_usuario INT NOT NULL,
   id_producto INT NOT NULL,
+  id_ropa INT NOT NULL,
   FOREIGN KEY (id_usuario) REFERENCES usuario(id),
   FOREIGN KEY (id_producto) REFERENCES producto(id)
+  FOREIGN KEY (id_ropa) REFERENCES producto(id)
 );
 
 
