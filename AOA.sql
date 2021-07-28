@@ -15,6 +15,15 @@ CREATE TABLE producto (
   descripcion VARCHAR(300) NOT NULL,
   precio FLOAT,
   categoria VARCHAR(100),
+  marca VARCHAR(100)
+);
+
+CREATE TABLE ropa (
+  id INT IDENTITY(1, 1) PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  descripcion VARCHAR(300) NOT NULL,
+  precio FLOAT,
+  categoria VARCHAR(100),
   genero VARCHAR(10),
   talla VARCHAR(5),
   marca VARCHAR(100)
@@ -32,7 +41,7 @@ CREATE TABLE pedido (
 );
 
 
-INSERT INTO usuario(nombre, apellido1, apellido2, email, password) VALUES('Aarón', 'Rivero', 'Gómez', 'aaronriv@gmail.com', 'Patosvolanto00');
+INSERT INTO usuario(nombre, apellido1, apellido2, email, password) VALUES('AarÃ³n', 'Rivero', 'GÃ³mez', 'aaronriv@gmail.com', 'Patosvolanto00');
 INSERT INTO producto (nombre, descripcion, precio, categoria, genero, talla, marca) VALUES('Nike Fly Go Ease', 'Tenis sin agujetas', 699.60, 'Deportivo', 'Unisex', 40, 'Nike');
  
 
