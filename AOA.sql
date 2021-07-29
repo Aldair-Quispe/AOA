@@ -11,7 +11,6 @@ CREATE TABLE usuario (
 CREATE TABLE producto (
   id INT IDENTITY(1, 1) PRIMARY KEY,
   nombre VARCHAR(100) NOT NULL,
-  descripcion VARCHAR(300) NOT NULL,
   precio FLOAT,
   categoria VARCHAR(100),
   genero VARCHAR(10),
