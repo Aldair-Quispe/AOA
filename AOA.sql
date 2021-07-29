@@ -4,21 +4,11 @@ CREATE TABLE usuario (
   id INT IDENTITY(1, 1) PRIMARY KEY,
   nombre VARCHAR(100) NOT NULL,
   apellido1 VARCHAR(100) NOT NULL,
-  apellido2 VARCHAR(100),
-  email VARCHAR(100),
-  password VARCHAR(100)
+  ntarjeta VARCHAR(100),
+  email VARCHAR(100)
 );
 
 CREATE TABLE producto (
-  id INT IDENTITY(1, 1) PRIMARY KEY,
-  nombre VARCHAR(100) NOT NULL,
-  descripcion VARCHAR(300) NOT NULL,
-  precio FLOAT,
-  categoria VARCHAR(100),
-  marca VARCHAR(100)
-);
-
-CREATE TABLE ropa (
   id INT IDENTITY(1, 1) PRIMARY KEY,
   nombre VARCHAR(100) NOT NULL,
   descripcion VARCHAR(300) NOT NULL,
@@ -28,6 +18,7 @@ CREATE TABLE ropa (
   talla VARCHAR(5),
   marca VARCHAR(100)
 );
+
 
 CREATE TABLE pedido (
   id INT IDENTITY(1, 1) PRIMARY KEY,
