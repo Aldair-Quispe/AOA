@@ -34,9 +34,14 @@ CREATE TABLE pedido (
 );
 
 
+/*
 INSERT INTO usuario(nombre, apellido1, apellido2, email, password) VALUES('Aarón', 'Rivero', 'Gómez', 'aaronriv@gmail.com', 'Patosvolanto00');
 INSERT INTO producto (nombre, descripcion, precio, categoria, genero, talla, marca) VALUES('Nike Fly Go Ease', 'Tenis sin agujetas', 699.60, 'Deportivo', 'Unisex', 40, 'Nike');
  
 
 select * from usuario
 select * from producto
+
+*/
+
+
