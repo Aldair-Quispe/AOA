@@ -12,19 +12,14 @@ namespace TiendaAOA_CS
     using System;
     using System.Collections.Generic;
     
-    public partial class Usuario
+    public partial class Compras
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Usuario()
-        {
-            this.Compras = new HashSet<Compras>();
-        }
-    
         public long id { get; set; }
-        public string username { get; set; }
-        public string password { get; set; }
+        public long productoId { get; set; }
+        public long usuarioId { get; set; }
+        public int cantidad { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Compras> Compras { get; set; }
+        public virtual Producto Producto { get; set; }
+        public virtual Usuario Usuario { get; set; }
     }
 }
