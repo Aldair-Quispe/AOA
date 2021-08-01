@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AOAStoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="precio" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="imagen" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Compras" Relationship="AOAStoreModel.FK_Compras_Producto" FromRole="Producto" ToRole="Compras" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Compras" Relationship="AOAStoreModel.FK_Compras_Usuario" FromRole="Usuario" ToRole="Compras" />
+  </EntityType>
+  <EntityContainer Name="AOAStoreEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Producto" EntityType="Self.Producto" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <EntitySet Name="ProductoReciente" EntityType="AOAStoreModel.ProductoReciente" />
+    <EntitySet Name="Compras" EntityType="AOAStoreModel.Compras" />
+    <AssociationSet Name="FK_Compras_Producto" Association="AOAStoreModel.FK_Compras_Producto">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Compras" EntitySet="Compras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Compras_Usuario" Association="AOAStoreModel.FK_Compras_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Compras" EntitySet="Compras" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ProductoReciente">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="precio" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="imagen" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Compras">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="productoId" Type="Int64" Nullable="false" />
+    <Property Name="usuarioId" Type="Int64" Nullable="false" />
+    <Property Name="cantidad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Producto" Relationship="AOAStoreModel.FK_Compras_Producto" FromRole="Compras" ToRole="Producto" />
+    <NavigationProperty Name="Usuario" Relationship="AOAStoreModel.FK_Compras_Usuario" FromRole="Compras" ToRole="Usuario" />
+  </EntityType>
+  <Association Name="FK_Compras_Producto">
+    <End Type="AOAStoreModel.Producto" Role="Producto" Multiplicity="1" />
+    <End Type="AOAStoreModel.Compras" Role="Compras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Compras">
+        <PropertyRef Name="productoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Compras_Usuario">
+    <End Type="AOAStoreModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="AOAStoreModel.Compras" Role="Compras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Compras">
+        <PropertyRef Name="usuarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
